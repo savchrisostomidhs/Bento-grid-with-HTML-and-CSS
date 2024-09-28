@@ -1,0 +1,366 @@
+@font-face {
+    font-family: "DM Sans";
+    src: url(./assets/fonts/DMSans-VariableFont_opsz\,wght.ttf);
+}
+
+@font-face {
+    font-family: "DM Sans Italic";
+    src: url(./assets/fonts/DMSans-Italic-VariableFont_opsz\,wght.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body,
+.container {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    align-items: center;
+    background-color: hsla(254, 88%, 90%, 0.4);
+    display: flex;
+    font-family: "DM Sans", sans-serif;
+    justify-content: center;
+}
+
+.container {
+    display: grid;
+    gap: 32px;
+    grid-template-areas: "left right";
+    grid-template-columns: 22% 78%;
+    height: 86%;
+    width: 80%;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    grid-area: left;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.right {
+    align-content: space-between;
+    display: grid;
+    gap: 32px;
+    grid-template-areas: "reviews reviews schedule" "manage maintain schedule" "audience grow grow";
+    grid-template-columns: 1fr 1fr 25%;
+    grid-template-rows: 38% 27% 27%;
+    justify-content: space-between;
+}
+
+.card {
+    align-items: center;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Create */
+
+.create {
+    background-color: hsl(31, 66%, 93%);
+    height: 100%;
+    padding: 40px;
+}
+
+.create p {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 35px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.create p span {
+    color: hsl(256, 67%, 59%);
+    font-family: "DM Sans Italic";
+}
+
+.create img {
+    height: 90px;
+    width: 100%;
+}
+
+/* Reviews */
+
+.reviews {
+    background-color: hsl(256, 67%, 59%);
+    grid-area: reviews;
+    padding: 40px;
+}
+
+.reviews h1 {
+    color: white;
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 60px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.reviews h1 span:nth-child(1) {
+    color: hsl(39, 100%, 71%);
+}
+
+.reviews h1 span:nth-child(2) {
+    font-family: "DM Sans Italic";
+}
+
+.reviews img {
+    height: 30px;
+    margin-bottom: 5px;
+    width: 190px;
+}
+
+.reviews p {
+    color: hsla(0, 0%, 100%, 0.7);
+    font-size: 18px;
+}
+
+/* Schedule */
+
+.schedule {
+    background-color: hsl(254, 88%, 90%);
+    gap: 20px;
+    grid-area: schedule;
+    overflow: hidden;
+}
+
+.schedule h2,
+.schedule p {
+    width: 76%;
+}
+
+.schedule img {
+    height: 50%;
+    position: relative;
+    right: -32%;
+    width: 140%;
+}
+
+/* Write */
+
+.write {
+    background-color: hsl(39, 100%, 71%);
+    height: 100%;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.write p {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 36px;
+}
+
+.write img {
+    height: 60%;
+    width: 100%;
+}
+
+/* Manage */
+
+.manage {
+    background-color: hsl(0, 0%, 100%);
+    grid-area: manage;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.manage .img {
+    height: 30%;
+    width: 100%;
+}
+
+.manage img {
+    height: 130%;
+    width: 140%;
+}
+
+.manage p {
+    align-self: flex-start;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 26px;
+    width: 80%;
+}
+
+/* Maintain */
+
+.maintain {
+    background-color: hsl(39, 100%, 71%);
+    gap: 20px;
+    grid-area: maintain;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 20px 25px 0 25px;
+}
+
+.maintain p {
+    align-self: flex-start;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 26px;
+    width: 80%;
+}
+
+.maintain img {
+    height: 100%;
+    width: 100%;
+}
+
+/* Audience */
+
+.audience {
+    align-items: flex-start;
+    background-color: hsl(0, 0%, 100%);
+    grid-area: audience;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.audience p span {
+    font-size: 54px;
+    font-weight: 600;
+}
+
+.audience p {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.audience img {
+    height: 40%;
+    width: 80%;
+}
+
+/* Grow */
+
+.grow {
+    background-color: hsl(256, 67%, 59%);
+    flex-direction: row;
+    gap: 10px;
+    grid-area: grow;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+.grow p {
+    color: hsl(0, 0%, 100%);
+    font-size: 40px;
+    line-height: 36px;
+}
+
+.grow img {
+    height: 100%;
+    width: 45%;
+}
+
+.attribution {
+    display: none;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 800px) {
+    body {
+        padding: 40px 20px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        grid-template-columns: 100%;
+        height: 100%;
+        width: 100%;
+    }
+
+    .left,
+    .right {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .card {
+        height: fit-content;
+        width: 100%;
+    }
+
+    .reviews h1 {
+        font-size: 34px;
+        line-height: 30px;
+    }
+
+    .reviews p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .manage img {
+        height: 140%;
+        width: 120%;
+    }
+
+    .manage p {
+        font-size: 18px;
+        width: 100%;
+    }
+
+    .schedule {
+        padding: 20px;
+    }
+
+    .schedule h2,
+    .schedule p {
+        width: 100%;
+    }
+
+    .schedule img {
+        height: 50%;
+        position: static;
+        width: 100%;
+    }
+
+    .grow {
+        flex-direction: column;
+    }
+
+    .grow img {
+        width: 80%;
+    }
+
+    .grow p {
+        font-size: 30px;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .create p {
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    .write p {
+        font-size: 26px;
+        line-height: 24px;
+    }
+}
